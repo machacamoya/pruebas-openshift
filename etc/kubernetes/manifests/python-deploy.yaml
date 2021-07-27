@@ -18,7 +18,7 @@ spec:
             - pruebas.py
           command:
             - python3
-          image: index.docker.io/python:3.9.6-alpine
+          image: index.docker.io/machacamoya/santander-dockercoins:0.3-rng
           volumeMounts:
             - mountPath: /src/
               name: python-flask-volume
