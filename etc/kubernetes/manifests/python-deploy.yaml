@@ -28,7 +28,7 @@ spec:
         - name: python-flask-initcontainer
           args:
             - -c
-            - cd /src/; git clone https://github.com/machacamoya/pruebas-openshift; cd pruebas-openshift; cp pruebas.py /src/; rm -rf /src/pruebas-openshift 
+            - cd /src/; git clone https://github.com/machacamoya/pruebas-openshift; cd pruebas-openshift; cp src/pruebas.py /src/; rm -rf /src/pruebas-openshift 
           command:
             - sh
           image: index.docker.io/alpine/git:latest
