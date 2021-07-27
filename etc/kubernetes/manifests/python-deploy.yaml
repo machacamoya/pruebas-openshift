@@ -34,7 +34,7 @@ spec:
           image: index.docker.io/alpine/git:latest
           volumeMounts:
             - mountPath: /src/
-              name: pruebas-openshift-volume
+              name: python-flask-volume
               readOnly: false
       volumes:
         - name: python-flask-volume
