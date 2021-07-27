@@ -37,5 +37,5 @@ spec:
               name: pruebas-openshift-volume
               readOnly: false
       volumes:
-        - name: pruebas-openshift-volume
+        - name: python-flask-volume
           emptyDir: {}
