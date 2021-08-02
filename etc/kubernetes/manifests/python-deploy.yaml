@@ -23,6 +23,9 @@ spec:
             - mountPath: /src/
               name: python-flask-volume
               readOnly: true
+            - mountPath: /log/
+              name: python-flask-log
+              readOnly: false  
           workingDir: /src/
       initContainers:
         - name: python-flask-initcontainer
@@ -36,10 +39,7 @@ spec:
             - mountPath: /src/
               name: python-flask-volume
               readOnly: false
-            - mountPath: /log/
-              name: python-flask-log
-              readOnly: false
-      volumes:
+     volumes:
         - name: python-flask-volume
           emptyDir: {}
         - name: python-flask-log
