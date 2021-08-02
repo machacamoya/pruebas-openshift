@@ -39,7 +39,7 @@ spec:
             - mountPath: /src/
               name: python-flask-volume
               readOnly: false
-     volumes:
+      volumes:
         - name: python-flask-volume
           emptyDir: {}
         - name: python-flask-log
