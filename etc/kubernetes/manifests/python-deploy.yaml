@@ -44,5 +44,5 @@ spec:
           emptyDir: {}
         - name: python-flask-log
           persistentVolumeClaim: 
-            claimName: python-flask-pvc
+            claimName: log-pvc
             readOnly: false
