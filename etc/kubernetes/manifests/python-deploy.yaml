@@ -36,6 +36,13 @@ spec:
             - mountPath: /src/
               name: python-flask-volume
               readOnly: false
+            - mountPath: /log/
+              name: python-flask-log
+              readOnly: false
       volumes:
         - name: python-flask-volume
           emptyDir: {}
+        - name: python-flask-log
+          persistentVolumeClaim: 
+            claimName: python-flask-pvc
+            readOnly: false
