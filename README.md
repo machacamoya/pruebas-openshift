@@ -1,7 +1,7 @@
 Repositorio para pruebas openshift
 
-docker search imagen
-docker pull imagen
+. docker search imagen
+. docker pull imagen
 docker run imagen -d
 docker images
 docker ps
