@@ -1,4 +1,16 @@
 Repositorio para pruebas openshift
+
+docker search imagen
+docker pull imagen
+docker run imagen -d
+docker images
+docker ps
+docker ps -a
+docker stop contenedor
+docker rm contenedor
+docker rmi imagen
+
+
 https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
 
 oc create namespace openshift-nfs-storage
