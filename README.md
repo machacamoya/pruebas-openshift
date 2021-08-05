@@ -21,3 +21,27 @@ https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-443
 - oc create -f deploy/class.yaml 
 - oc create -f deploy/deployment.yaml
 - oc get pods -n openshift-nfs-storage
+
+
+
+- DNSMASQ
+
+/etc/NetworkManager/NetworkManager.conf # deshabilitar dnsmasq en NetworkManager
+
+[main]
+
+dns=none
+
+/etc/dnsmasq.d/crc.conf 
+
+server=/crc.testing/XXX.XXX.XXX.XXX
+
+address=/apps-crc.testing/XXX.XXX.XXX.XXX
+
+local=/nfs-server/
+
+
+/etc/hosts
+
+XXX.XXX.XXX.XXX nfs-server
+
