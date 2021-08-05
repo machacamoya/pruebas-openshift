@@ -28,9 +28,21 @@ https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-443
 
 /etc/NetworkManager/NetworkManager.conf # deshabilitar dnsmasq en NetworkManager
 
+/etc/NetworkManager/conf.d/crc-nm-dnsmasq.conf
+
+[main]
+
+#dns=dnsmasq
+
+
+O
+
 [main]
 
 dns=none
+
+
+
 
 /etc/dnsmasq.d/crc.conf 
 
