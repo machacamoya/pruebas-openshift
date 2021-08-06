@@ -50,5 +50,5 @@ spec:
             claimName: log-pvc
             readOnly: false
         - name: cnfmap-flask
-            configMap:
-              name: cnfmap-python-flask
+          configMap:
+            name: cnfmap-python-flask
