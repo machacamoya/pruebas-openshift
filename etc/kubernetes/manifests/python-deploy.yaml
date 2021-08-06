@@ -25,7 +25,10 @@ spec:
               readOnly: true
             - mountPath: /log/
               name: python-flask-log
-              readOnly: false  
+              readOnly: false
+            - mountPath: /config/
+              name: cnfmap-flask
+              readOnly: true
           workingDir: /src/
       initContainers:
         - name: python-flask-initcontainer
@@ -46,3 +49,6 @@ spec:
           persistentVolumeClaim: 
             claimName: log-pvc
             readOnly: false
+        - name: cnfmap-flask
+            configMap:
+              name: cnfmap-python-flask
