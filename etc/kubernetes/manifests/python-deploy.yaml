@@ -29,6 +29,9 @@ spec:
             - mountPath: /config/
               name: cnfmap-flask
               readOnly: true
+            - mountPath: /secret 
+              name: application-sensitive-config
+              readOnly: true
           workingDir: /src/
       initContainers:
         - name: python-flask-initcontainer
@@ -52,3 +55,6 @@ spec:
         - name: cnfmap-flask
           configMap:
             name: cnfmap-python-flask
+        - name: application-sensitive-config
+          secret:
+            secretName: application-sensitive-config 
