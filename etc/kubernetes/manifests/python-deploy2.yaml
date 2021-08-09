@@ -25,7 +25,7 @@ spec:
             - mountPath: /secret 
               name: application-sensitive-config
               readOnly: true
-          workingDir: /src/
+          workingDir: /opt/app
       volumes:
         - name: python-flask-log
           persistentVolumeClaim: 
