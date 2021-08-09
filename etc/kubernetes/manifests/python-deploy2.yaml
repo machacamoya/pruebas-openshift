@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: python-flask-v2-container
-          image: index.docker.io/machacamoya/santander-dockercoins:0.3-rng
+          image: index.docker.io/machacamoya/pruebas-openshift:python-flask-v1.0
           volumeMounts:
             - mountPath: /src/
               name: python-flask-volume
