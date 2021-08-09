@@ -16,9 +16,6 @@ spec:
         - name: python-flask-v2-container
           image: index.docker.io/machacamoya/pruebas-openshift:python-flask-v1.0
           volumeMounts:
-            - mountPath: /src/
-              name: python-flask-volume
-              readOnly: true
             - mountPath: /log/
               name: python-flask-log
               readOnly: false
@@ -30,8 +27,6 @@ spec:
               readOnly: true
           workingDir: /src/
       volumes:
-        - name: python-flask-volume
-          emptyDir: {}
         - name: python-flask-log
           persistentVolumeClaim: 
             claimName: log-pvc
