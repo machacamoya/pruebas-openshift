@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: flask2
+  namespace: pcm1
+spec:
+  host: flask2-pcm1.apps-crc.testing
+  to:
+    kind: Service
+    name: python-flask2-svc
+  port:
+    targetPort: 8081
