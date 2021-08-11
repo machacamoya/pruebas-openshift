@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: python-flask-v2-container
-          image: index.docker.io/machacamoya/pruebas-openshift:python-flask-v1.0
+          image: index.docker.io/machacamoya/pruebas-openshift:python-flask-v2.0
           volumeMounts:
             - mountPath: /log/
               name: python-flask-log
