@@ -1,0 +1,2 @@
+docker build -t wlppcm1 .
+docker run -d --name wlppcm1 -p 9080:9080 -p 9443:9443 wlppcm1
