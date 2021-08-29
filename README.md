@@ -9,6 +9,7 @@ Repositorio para pruebas openshift
 - docker stop contenedor
 - docker rm contenedor
 - docker rmi imagen
+- docker system prune -a 
 
 
 https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
