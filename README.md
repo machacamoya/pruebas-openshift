@@ -9,11 +9,14 @@ Repositorio para pruebas openshift
 - docker stop contenedor
 - docker rm contenedor
 - docker rmi imagen
-- docker system prune -a 
+- docker system prune -a
 
 
 https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
 
+- crc start
+- crc status
+- crc console --credentials
 - oc create namespace openshift-nfs-storage
 - oc label namespace openshift-nfs-storage "openshift.io/cluster-monitoring=true"
 - oc project openshift-nfs-storage
