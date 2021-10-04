@@ -17,6 +17,7 @@ https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-443
 - crc start
 - crc status
 - crc console --credentials
+- crc start --log-level debug
 - oc create namespace openshift-nfs-storage
 - oc label namespace openshift-nfs-storage "openshift.io/cluster-monitoring=true"
 - oc project openshift-nfs-storage
