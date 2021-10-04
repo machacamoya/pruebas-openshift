@@ -13,14 +13,22 @@ Repositorio para pruebas openshift
 - docker container prune
 
 https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
-
+---------------------- CRC -----------------------
 - crc start
 - crc start --log-level debug
 - crc status
 - crc status --log-level debug
 - crc console --credentials
 
-
+############ REINSTALAR ######################
+- crc delete -f
+- crc cleanup
+- Enable Docker
+- Restart laptop
+- rm -fr ~/.crc
+- crc setup
+- crc start -p pull-secret.txt --log-level debug
+--------------------------------------------------
 
 - oc create namespace openshift-nfs-storage
 - oc label namespace openshift-nfs-storage "openshift.io/cluster-monitoring=true"
