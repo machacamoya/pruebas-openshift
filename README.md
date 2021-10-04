@@ -1,5 +1,8 @@
 Repositorio para pruebas openshift
+https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
 
+------------------------------------------------------------------------------------------------
+---------------------- DOCKER -----------------------
 - docker search imagen
 - docker pull imagen
 - docker run imagen -d
@@ -11,9 +14,8 @@ Repositorio para pruebas openshift
 - docker rmi imagen
 - docker system prune -a
 - docker container prune
-
-https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
----------------------- CRC -----------------------
+------------------------------------------------------------------------------------------------
+################## CRC ########################
 - crc start
 - crc start --log-level debug
 - crc status
@@ -28,8 +30,8 @@ https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-443
 - rm -fr ~/.crc
 - crc setup
 - crc start -p pull-secret.txt --log-level debug
---------------------------------------------------
-
+------------------------------------------------------------------------------------------------
+################## OC ########################
 - oc create namespace openshift-nfs-storage
 - oc label namespace openshift-nfs-storage "openshift.io/cluster-monitoring=true"
 - oc project openshift-nfs-storage
@@ -39,7 +41,7 @@ https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-443
 - oc create -f deploy/deployment.yaml
 - oc get pods -n openshift-nfs-storage
 
-
+------------------------------------------------------------------------------------------------
 
 - DNSMASQ
 
