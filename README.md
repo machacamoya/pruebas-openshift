@@ -15,9 +15,13 @@ Repositorio para pruebas openshift
 https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
 
 - crc start
-- crc status
-- crc console --credentials
 - crc start --log-level debug
+- crc status
+- crc status --log-level debug
+- crc console --credentials
+
+
+
 - oc create namespace openshift-nfs-storage
 - oc label namespace openshift-nfs-storage "openshift.io/cluster-monitoring=true"
 - oc project openshift-nfs-storage
