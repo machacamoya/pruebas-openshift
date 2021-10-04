@@ -2,7 +2,7 @@ Repositorio para pruebas openshift
 https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
 
 ------------------------------------------------------------------------------------------------
----------------------- DOCKER -----------------------
+################## DOCKER ######################
 - docker search imagen
 - docker pull imagen
 - docker run imagen -d
