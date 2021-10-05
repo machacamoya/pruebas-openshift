@@ -3,6 +3,18 @@ Repositorio para pruebas openshift
 ------------------------------------------------------------------------------------------------
 https://two-oes.medium.com/working-with-nfs-as-a-storageclass-in-openshift-4-44367576771c
 
+- oc login -u kubeadmin -p XXXXXXXX https://api.crc.testing:6443
+oc create namespace openshift-nfs-storage
+oc project openshift-nfs-storage
+ 
+cd kubernetes-incubator/nfs-client/
+NAMESPACE=`oc project -q`
+oc create -f deploy/rbac.yaml
+oc adm policy add-scc-to-user hostmount-anyuid system:serviceaccount:$NAMESPACE:nfs-client-provisioner
+oc create -f deploy/class.yaml 
+oc create -f deploy/deployment.yaml
+oc get pods -n openshift-nfs-storage
+
 ------------------------------------------------------------------------------------------------
 ################## DOCKER ######################
 - docker search imagen
