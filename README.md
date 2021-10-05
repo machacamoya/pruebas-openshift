@@ -28,6 +28,11 @@ oc get pods -n openshift-nfs-storage
 - docker rmi imagen
 - docker system prune -a
 - docker container prune
+- docker build -f Dockerfile.slave -t slave-ansiable .
+- docker build -f Dockerfile.jenkins -t jenkins-ansiable .
+- docker run --name jenkins_ansible -p 8080:8080 -p 50000:50000 --env JAVA_OPTS="-Djava.util.logging.config.file=/PATH_TO_DIR/log.properties" -v /PATH_TO_DIR/data:/var/jenkins_home --env JAVA_OPTS=-Dhudson.footerURL=http://XXXX.org jenkins_ansible
+- docker run --name server1 -h server1 -d slave
+- docker inspect server1 | grep IPAddress
 ------------------------------------------------------------------------------------------------
 ################## CRC ########################
 - crc start
