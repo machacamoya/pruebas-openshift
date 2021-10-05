@@ -56,6 +56,11 @@ oc get pods -n openshift-nfs-storage
 - oc get pods -n openshift-nfs-storage
 
 ------------------------------------------------------------------------------------------------
+################## JENKINS ########################
+
+docker run --name jenkins -p 8080:8080 -p 50000:50000 --env JAVA_OPTS="-Djava.util.logging.config.file=./log.properties" -v ./data:/var/jenkins_home jenkins
+
+-------------------------------------------------------------------------------------------------
 
 - DNSMASQ
 
