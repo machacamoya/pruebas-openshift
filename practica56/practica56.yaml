@@ -1,39 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-flask-v2-deploy
+  name: practica56-deploy
 spec:
   selector:
     matchLabels:
-      app: python-flask-v2
+      app: practica56
   replicas: 1
   template:
     metadata:
       labels:
-        app: python-flask-v2
+        app: practica56
     spec:
       containers:
-        - name: python-flask-v2-container
-          image: index.docker.io/machacamoya/pruebas-openshift:python-flask-v2.0
+        - name: practica56-container
+          image: index.docker.io/machacamoya/pruebas-openshift:practica56-v1.0
           volumeMounts:
-            - mountPath: /log/
-              name: python-flask-log
+            - mountPath: /logs/
+              name: practica56-log
               readOnly: false
             - mountPath: /config/
-              name: cnfmap-flask
+              name: cnfmap-practica56
               readOnly: true
-            - mountPath: /secret 
+            - mountPath: /secret/ 
               name: application-sensitive-config
               readOnly: true
-          workingDir: /opt/app
+          workingDir: /home/wlp
       volumes:
-        - name: python-flask-log
+        - name: practica56-log
           persistentVolumeClaim: 
             claimName: log-pvc
             readOnly: false
-        - name: cnfmap-flask
+        - name: cnfmap-practica56
           configMap:
-            name: cnfmap-python-flask
+            name: cnfmap-practica56
         - name: application-sensitive-config
           secret:
             secretName: application-sensitive-config 
