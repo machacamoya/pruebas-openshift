@@ -5,7 +5,8 @@ EXPOSE 9080 9443
 ENV GID="28000" UID="28000" WLP_HOME="/opt/ibm"
 
 RUN groupadd -g $GID wlp && useradd -rm -d /home/wlp -s /bin/bash -g wlp -u $UID wlp 
-RUN chown -R wlp:wlp $WLP_HOME /logs
+RUN mkdir /secret/
+RUN chown -R wlp:wlp $WLP_HOME /logs /secret
 
 USER wlp
 ADD --chown=wlp:wlp crud-jsp.ear /config/dropins/crud-jsp.ear
