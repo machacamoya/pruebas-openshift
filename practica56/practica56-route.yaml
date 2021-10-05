@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: practica56
-  namespace: pcm1
+  namespace: pcm
 spec:
   host: practica56-pcm1.apps-crc.testing
   to:
